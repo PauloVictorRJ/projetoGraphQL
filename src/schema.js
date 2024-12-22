@@ -13,9 +13,9 @@ const typeDefs = gql`
     }
 
     type Marker {
+        id: Int!    
         nome: String!
-        latLng: LatLng!  
-        cor: String!        
+        latLng: LatLng!        
     }
 
     type LatLng {  
@@ -24,15 +24,14 @@ const typeDefs = gql`
     }
 
     input UpdateMarkerInput {
-        nome: String
+        id: Int!
+        nome: String!
         latLng: LatLngInput 
-        cor: String
     }
 
     input AddMarkerInput {
         nome: String!
         latLng: LatLngInput!  
-        cor: String!
     }
 
     input LatLngInput {  
